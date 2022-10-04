@@ -1,0 +1,8 @@
+deploy:
+  appName: product-management-web
+  namespace: default
+
+joybox-app:
+  image:
+    repository: nginx
+    tag: "latest"

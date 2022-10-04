@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: joyboy-applicationset
+  namespace: argocd
+spec:
+  generators:
+    - git:
+        repoURL: https://github.com/appledoughnut/joybox-deployment
+        revision: HEAD
+        files:
+        - path: "apps/**/*.yaml"
+  template:
+    metadata:
+      name: deploy.appName
+    spec:
+      project: default
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: deploy.namespace
+      source:
+        repoURL: https://github.com/argoproj/applicationset.git
+        targetRevision: HEAD
+        path: '{{path}}'
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+    
