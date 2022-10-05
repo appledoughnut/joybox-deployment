@@ -1,5 +1,3 @@
-joybox:
-  namespace: metallb
 configInline:
   address-pools:
     - name: default
