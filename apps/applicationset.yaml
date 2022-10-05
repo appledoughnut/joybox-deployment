@@ -20,7 +20,7 @@ spec:
         path: '{{path}}'
       destination:
         server: https://kubernetes.default.svc
-        namespace: default
+        namespace: '{{ joybox.namespace }}'
       syncPolicy:
         automated:
           prune: true
