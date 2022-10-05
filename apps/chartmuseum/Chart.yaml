@@ -1,5 +1,5 @@
 apiVersion: v2
-name: chatmuseum
+name: chartmuseum
 description: A Helm chart for Chartmuseum
 type: application
 version: 0.1.0
