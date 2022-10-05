@@ -1,6 +1,0 @@
-dependencies:
-- name: joybox-app
-  repository: http://192.168.0.11:8080
-  version: 0.1.0
-digest: sha256:233d10a9f566b86bac1066160e4b02d1755e769ba81e7f0a714b39c1a0c7b15c
-generated: "2022-10-05T07:18:11.376661+09:00"
