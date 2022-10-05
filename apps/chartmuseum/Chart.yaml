@@ -1,0 +1,11 @@
+apiVersion: v2
+name: chatmuseum
+description: A Helm chart for Chartmuseum
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
+
+dependencies:
+- name: chatmuseum
+  version: "0.15.0"
+  repository: https://chartmuseum.github.io/charts

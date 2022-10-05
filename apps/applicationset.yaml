@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: joybox
+spec:
+  generators:
+  - git:
+      repoURL: git@github.com:appledoughnut/joybox-deployment.git
+      revision: HEAD
+      directories:
+      - path: apps/*
+  template:
+    metadata:
+      name: '{{path[1]}}'
+    spec:
+      project: default
+      source:
+        repoURL: git@github.com:appledoughnut/joybox-deployment.git
+        targetRevision: HEAD
+        path: '{{path}}'
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: default
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+      
