@@ -3,8 +3,8 @@ joybox-app:
   image:
     repository: 282398598576.dkr.ecr.ap-northeast-2.amazonaws.com/front
     tag: 49919e72245782005f9ba82688a02bb37490279a
-    imagePullSecrets:
-    - name: regcred
+  imagePullSecrets:
+  - name: regcred
   ingress:
     enabled: true
     className: "nginx"
