@@ -253,7 +253,7 @@ chartmuseum:
     size: 5Gi
     labels: {}
       # name: value
-    path: /joybox/chartmuseum
+    path: /storage
     ## A manually managed Persistent Volume and Claim
     ## Requires persistence.enabled: true
     ## If defined, PVC must be created manually before volume will be bound
