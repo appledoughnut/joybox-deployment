@@ -10,8 +10,6 @@ spec:
       revision: HEAD
       directories:
       - path: apps/*
-      - path: apps/applicationset
-        exclude: true
   template:
     metadata:
       name: '{{path[1]}}'
