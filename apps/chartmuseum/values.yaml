@@ -1,12 +1,12 @@
-local-pv:
-  persistentVolume:
-    name: chartmuseum
-    storage: 5Gi
-    accessMode: ReadWriteOnce
-    path: /joybox/chatmuseum
-    node: k8s-worker-1
-  storageClass:
-    name: chartmuseum
+# local-pv:
+#   persistentVolume:
+#     name: chartmuseum
+#     storage: 5Gi
+#     accessMode: ReadWriteOnce
+#     path: /joybox/chatmuseum
+#     node: k8s-worker-1
+#   storageClass:
+#     name: chartmuseum
 
 chartmuseum:
   extraArgs: []
@@ -258,7 +258,7 @@ chartmuseum:
   affinity: {}
 
   persistence:
-    enabled: true
+    enabled: false
     accessMode: ReadWriteOnce
     size: 5Gi
     labels: {}
