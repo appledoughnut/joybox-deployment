@@ -6,7 +6,7 @@ joybox-app:
     imagePullSecrets:
     - name: docker-secret
   ingress:
-    enable: true
+    enabled: true
     className: "nginx"
     hosts:
     - host: pmw.joybox.local
