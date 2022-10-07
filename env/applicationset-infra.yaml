@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: joybox
+  name: applicationset-infra
   namespace: argocd
 spec:
   generators:
@@ -9,7 +9,7 @@ spec:
       repoURL: git@github.com:appledoughnut/joybox-deployment.git
       revision: HEAD
       directories:
-      - path: apps/*
+      - path: infra/*
   template:
     metadata:
       name: '{{path[1]}}'
