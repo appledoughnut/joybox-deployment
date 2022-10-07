@@ -258,7 +258,7 @@ chartmuseum:
   affinity: {}
 
   persistence:
-    enabled: false
+    enabled: true
     accessMode: ReadWriteOnce
     size: 5Gi
     labels: {}
@@ -280,14 +280,14 @@ chartmuseum:
     volumeName: chartmuseum
 
     pv:
-      enabled: false
+      enabled: true
       pvname: chartmuseum
       capacity:
-        storage: 8Gi
+        storage: 5Gi
       accessMode: ReadWriteOnce
       nfs:
-        server:
-        path:
+        server: 192.168.0.15
+        path: /mnt/nfs
 
   ## Init containers parameters:
   ## volumePermissions: Change the owner of the persistent volume mountpoint to RunAsUser:fsGroup
