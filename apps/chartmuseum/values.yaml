@@ -248,7 +248,7 @@ chartmuseum:
   affinity: {}
 
   persistence:
-    enabled: false
+    enabled: true
     accessMode: ReadWriteOnce
     size: 8Gi
     labels: {}
