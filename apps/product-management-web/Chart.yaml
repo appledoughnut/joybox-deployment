@@ -8,4 +8,4 @@ appVersion: "1.0.0"
 dependencies:
 - name: joybox-app
   version: "0.1.0"
-  repository: http://chartmuseum.svc.cluster.local
+  repository: http://chartmuseum.joybox.local
