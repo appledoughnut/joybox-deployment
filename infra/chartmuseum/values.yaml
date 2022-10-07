@@ -1,13 +1,3 @@
-# local-pv:
-#   persistentVolume:
-#     name: chartmuseum
-#     storage: 5Gi
-#     accessMode: ReadWriteOnce
-#     path: /joybox/chatmuseum
-#     node: k8s-worker-1
-#   storageClass:
-#     name: chartmuseum
-
 chartmuseum:
   extraArgs: []
     # - --storage-timestamp-tolerance 1s
@@ -263,7 +253,7 @@ chartmuseum:
     size: 5Gi
     labels: {}
       # name: value
-    path: /joybox/chatmuseum
+    path: /joybox/chartmuseum
     ## A manually managed Persistent Volume and Claim
     ## Requires persistence.enabled: true
     ## If defined, PVC must be created manually before volume will be bound
@@ -287,7 +277,7 @@ chartmuseum:
       accessMode: ReadWriteOnce
       nfs:
         server: 192.168.0.15
-        path: /mnt/nfs/chartmuseum
+        path: /mnt/nas/chartmuseum
 
   ## Init containers parameters:
   ## volumePermissions: Change the owner of the persistent volume mountpoint to RunAsUser:fsGroup
