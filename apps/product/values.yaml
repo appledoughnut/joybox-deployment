@@ -1,0 +1,7 @@
+joybox-app:
+  appName: product
+  image:
+    repository: 282398598576.dkr.ecr.ap-northeast-2.amazonaws.com/product
+    tag: 5e5815cd7ed5953ddfce0c1514962755fb20ed0d
+    imagePullSecrets:
+    - name: docker-secret
