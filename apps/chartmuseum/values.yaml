@@ -1,3 +1,13 @@
+local-pv:
+  persistentVolume:
+    name: chartmuseum
+    storage: 5Gi
+    accessMode: ReadWriteOnce
+    path: /joybox/chatmuseum
+    node: k8s-worker-1
+  storageClass:
+    name: chartmuseum
+
 chartmuseum:
   extraArgs: []
     # - --storage-timestamp-tolerance 1s
@@ -250,10 +260,10 @@ chartmuseum:
   persistence:
     enabled: true
     accessMode: ReadWriteOnce
-    size: 8Gi
+    size: 5Gi
     labels: {}
       # name: value
-    path: /storage
+    path: /joybox/chatmuseum
     ## A manually managed Persistent Volume and Claim
     ## Requires persistence.enabled: true
     ## If defined, PVC must be created manually before volume will be bound
@@ -267,10 +277,11 @@ chartmuseum:
     ##   GKE, AWS & OpenStack)
     ##
     # storageClass: "-"
-    # volumeName:
+    volumeName: chartmuseum
+
     pv:
       enabled: false
-      pvname:
+      pvname: chartmuseum
       capacity:
         storage: 8Gi
       accessMode: ReadWriteOnce
