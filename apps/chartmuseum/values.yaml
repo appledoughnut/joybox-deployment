@@ -287,7 +287,7 @@ chartmuseum:
       accessMode: ReadWriteOnce
       nfs:
         server: 192.168.0.15
-        path: /mnt/nfs
+        path: /mnt/nfs/chartmuseum
 
   ## Init containers parameters:
   ## volumePermissions: Change the owner of the persistent volume mountpoint to RunAsUser:fsGroup
