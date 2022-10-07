@@ -2,7 +2,7 @@ joybox-app:
   appName: product
   image:
     repository: 282398598576.dkr.ecr.ap-northeast-2.amazonaws.com/product
-    tag: 8a46bc42fc006a4e90fc225add8eb424b9f967a6
+    tag: df498b102105a9de291c32d2c2695eb7eeca49b6
   imagePullSecrets:
   - name: regcred
   ingress:
