@@ -324,7 +324,7 @@ chartmuseum:
     ## Must be provided if Ingress is enabled
     ##
     hosts: 
-    - name: joybox.chartmuseum
+    - name: chartmuseum.joybox.local
       path: /
       # - name: chartmuseum.domain1.com
       #   path: /

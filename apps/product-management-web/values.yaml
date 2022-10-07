@@ -7,7 +7,7 @@ joybox-app:
     enable: true
     className: "nginx"
     hosts:
-    - host: joybox.product-management-web
+    - host: pmw.joybox.local
       paths:
       - path: /
         pathType: ImplementationSpecific

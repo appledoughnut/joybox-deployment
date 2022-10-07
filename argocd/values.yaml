@@ -1375,7 +1375,7 @@ argo-cd:
       ## Hostnames must be provided if Ingress is enabled.
       ## Secrets must be manually created in the namespace
       hosts:
-        - joybox.argocd
+        - argocd.joybox.local
         # - argocd.example.com
 
       # -- List of ingress paths
