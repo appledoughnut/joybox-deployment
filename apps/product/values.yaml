@@ -5,3 +5,11 @@ joybox-app:
     tag: 5e5815cd7ed5953ddfce0c1514962755fb20ed0d
     imagePullSecrets:
     - name: docker-secret
+  ingress:
+    enabled: true
+    className: "nginx"
+    hosts:
+    - host: product.joybox.local
+      paths:
+      - path: /
+        pathType: ImplementationSpecific
