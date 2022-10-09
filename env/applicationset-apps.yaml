@@ -19,10 +19,12 @@ spec:
         repoURL: git@github.com:appledoughnut/joybox-deployment.git
         targetRevision: HEAD
         path: '{{path}}'
-        helm:
-          valueFiles:
-            - values.yaml
-            - secrets.yaml
+        plugin:
+          name: decodeSecret
+          env:
+            - name: RELEASE_NAME
+              value: '{{path[1]}}'
+
       destination:
         server: https://kubernetes.default.svc
         namespace: default

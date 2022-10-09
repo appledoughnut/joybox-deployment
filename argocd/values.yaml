@@ -1525,6 +1525,12 @@ argo-cd:
         secrets+age-import, secrets+age-import-kubernetes,
         secrets,secrets+literal,
         https
+        
+      configManagementPlugins: |
+        - name: decodeSecret
+          generate:
+            command: ["/bin/sh", "-c"]
+            args: [ "helm secrets template -f secrets.yaml -f values.yaml $RELEASE_NAME ."  ]
 
       # dex.config: |
       #   connectors:

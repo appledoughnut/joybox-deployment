@@ -13,4 +13,3 @@ joybox-app:
       paths:
       - path: /
         pathType: ImplementationSpecific
-  env: {}
