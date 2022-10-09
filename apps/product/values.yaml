@@ -13,3 +13,5 @@ joybox-app:
       paths:
       - path: /
         pathType: ImplementationSpecific
+  env:
+    ENV_VALUE: test-value
