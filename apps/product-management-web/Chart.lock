@@ -1,6 +1,6 @@
 dependencies:
 - name: joybox-app
   repository: http://chartmuseum.joybox.local
-  version: 0.1.1
-digest: sha256:751a50deb6ad28c4f55c3eaffc3f567aa7e572a207d9344f530cc15e94a562c5
-generated: "2022-10-07T22:20:01.956891+09:00"
+  version: 0.1.4
+digest: sha256:a83326ab44108ad5ea1f1acb3b4d0d8cc59140414801dfa63a9c697a6d2d13d3
+generated: "2022-10-09T18:52:54.339178+09:00"
