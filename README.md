@@ -4,5 +4,6 @@
 # ingress domains
 LoadBalancer - 192.168.0.10 
 
-joybox.chartmuseum - 차트 레포지토리
-joybox.argocd - argocd ui
+chartmuseum.joybox.local - 차트 레포지토리
+argocd.joybox.local - argocd ui
+pmw.joyobx.local - product management web
