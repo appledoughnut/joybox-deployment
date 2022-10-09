@@ -1732,10 +1732,10 @@ argo-cd:
     image:
       # -- Repository to use for the repo server
       # @default -- `""` (defaults to global.image.repository)
-      repository: "" # defaults to global.image.repository
+      repository: "282398598576.dkr.ecr.ap-northeast-2.amazonaws.com/argocd_repo_server" # defaults to global.image.repository
       # -- Tag to use for the repo server
       # @default -- `""` (defaults to global.image.tag)
-      tag: "" # defaults to global.image.tag
+      tag: "0.1.0" # defaults to global.image.tag
       # -- Image pull policy for the repo server
       # @default -- `""` (defaults to global.image.imagePullPolicy)
       imagePullPolicy: "" # IfNotPresent
@@ -1968,7 +1968,8 @@ argo-cd:
       # maxUnavailable: 0
 
     # -- Secrets with credentials to pull images from a private registry
-    imagePullSecrets: []
+    imagePullSecrets: 
+    - name: docker-secret
 
   applicationSet:
     # -- Enable Application Set controller
