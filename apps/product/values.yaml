@@ -2,7 +2,7 @@ joybox-app:
   appName: product
   image:
     repository: 282398598576.dkr.ecr.ap-northeast-2.amazonaws.com/product
-    tag: e9dc0f017715065b74c652cfeb6cca810ce08ac4
+    tag: 82bb00d249ca417aa88a16b8e13c8d9adb571741
   imagePullSecrets:
   - name: regcred
   ingress:
@@ -14,14 +14,12 @@ joybox-app:
       - path: /
         pathType: ImplementationSpecific
   livenessProbe:
-    failureThreshold: 5
     httpGet:
       path: /health
       port: http
-    initialDelaySeconds: 20
+    initialDelaySeconds: 10
   readinessProbe:
-    failureThreshold: 5
     httpGet:
       path: /health
       port: http
-    initialDelaySeconds: 20
+    initialDelaySeconds: 10
