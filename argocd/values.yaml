@@ -1528,6 +1528,9 @@ argo-cd:
         
       configManagementPlugins: |
         - name: decodeSecret
+          init:
+            command: ["/bin/sh", "-c"]
+            args: [ "helm dependency update"  ]
           generate:
             command: ["/bin/sh", "-c"]
             args: [ "helm secrets template -f secrets.yaml -f values.yaml $RELEASE_NAME ."  ]
