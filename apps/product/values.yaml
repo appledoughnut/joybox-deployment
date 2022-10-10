@@ -14,12 +14,14 @@ joybox-app:
       - path: /
         pathType: ImplementationSpecific
   livenessProbe:
+    failureThreshold: 5
     httpGet:
       path: /health
       port: http
-    initialDelaySeconds: 10
+    initialDelaySeconds: 20
   readinessProbe:
+    failureThreshold: 5
     httpGet:
       path: /health
       port: http
-    initialDelaySeconds: 10
+    initialDelaySeconds: 20
