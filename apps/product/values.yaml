@@ -1,4 +1,5 @@
 joybox-app:
+  replicaCount: 3
   appName: product
   image:
     repository: 282398598576.dkr.ecr.ap-northeast-2.amazonaws.com/product
