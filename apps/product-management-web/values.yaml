@@ -2,7 +2,7 @@ joybox-app:
   appName: product-management-web
   image:
     repository: 282398598576.dkr.ecr.ap-northeast-2.amazonaws.com/product-management-web
-    tag: aff4d78ecc3c7f7c4d48e32271402389043fa28f
+    tag: 6c1cf146db0fd029bf0e076e67ea548a11e75257
   imagePullSecrets:
   - name: regcred
   ingress:
