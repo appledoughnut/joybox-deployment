@@ -1,0 +1,16 @@
+joybox-app:
+  replicaCount: 2
+  appName: user
+  image:
+    repository: 282398598576.dkr.ecr.ap-northeast-2.amazonaws.com/user
+    tag: 84f25fd458649c6cc38c1b2efa0049e677b452ea
+  imagePullSecrets:
+  - name: regcred
+  ingress:
+    enabled: true
+    className: "nginx"
+    hosts:
+    - host: user.joybox.local
+      paths:
+      - path: /
+        pathType: ImplementationSpecific
