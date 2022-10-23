@@ -1,5 +1,5 @@
 joybox-app:
-  replicaCount: 3
+  replicaCount: 2
   appName: product
   image:
     repository: 282398598576.dkr.ecr.ap-northeast-2.amazonaws.com/product
@@ -24,3 +24,11 @@ joybox-app:
       path: /health
       port: http
     initialDelaySeconds: 10
+
+  resources:
+    limits:
+      cpu: 100m
+      memory: 128Mi
+    requests:
+      cpu: 100m
+      memory: 128Mi

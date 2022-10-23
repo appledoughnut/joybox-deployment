@@ -1,11 +1,13 @@
 joybox-app:
   replicaCount: 2
   appName: user
+
   image:
     repository: 282398598576.dkr.ecr.ap-northeast-2.amazonaws.com/user
     tag: 84f25fd458649c6cc38c1b2efa0049e677b452ea
   imagePullSecrets:
   - name: regcred
+
   ingress:
     enabled: true
     className: "nginx"
@@ -14,13 +16,23 @@ joybox-app:
       paths:
       - path: /
         pathType: ImplementationSpecific
+
   livenessProbe:
     httpGet:
       path: /health
       port: http
     initialDelaySeconds: 10
+
   readinessProbe:
     httpGet:
       path: /health
       port: http
     initialDelaySeconds: 10
+  
+  resources:
+    limits:
+      cpu: 100m
+      memory: 128Mi
+    requests:
+      cpu: 100m
+      memory: 128Mi
