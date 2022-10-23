@@ -4,7 +4,7 @@ joybox-app:
 
   image:
     repository: 282398598576.dkr.ecr.ap-northeast-2.amazonaws.com/user
-    tag: 84f25fd458649c6cc38c1b2efa0049e677b452ea
+    tag: b95c0c164be01055a075b143f90c0508cab15292
   imagePullSecrets:
   - name: regcred
 
