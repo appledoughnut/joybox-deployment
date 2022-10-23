@@ -3,7 +3,7 @@ joybox-app:
   appName: vendor-client-gateway
   image:
     repository: 282398598576.dkr.ecr.ap-northeast-2.amazonaws.com/vendor-client-gateway
-    tag: b753e76765b3f61b9a7f501f23472d442ab41b4f
+    tag: 0e91de24e0076ba1dff23ea975b446633d2a3aaf
   imagePullSecrets:
   - name: regcred
 
