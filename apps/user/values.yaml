@@ -14,3 +14,13 @@ joybox-app:
       paths:
       - path: /
         pathType: ImplementationSpecific
+  livenessProbe:
+    httpGet:
+      path: /health
+      port: http
+    initialDelaySeconds: 10
+  readinessProbe:
+    httpGet:
+      path: /health
+      port: http
+    initialDelaySeconds: 10
