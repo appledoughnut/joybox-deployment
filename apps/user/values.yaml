@@ -1,5 +1,5 @@
 joybox-app:
-  replicaCount: 2
+  replicaCount: 1
   appName: user
 
   image:

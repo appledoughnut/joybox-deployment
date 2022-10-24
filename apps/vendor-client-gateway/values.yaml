@@ -1,5 +1,5 @@
 joybox-app:
-  replicaCount: 2
+  replicaCount: 1
   appName: vendor-client-gateway
   image:
     repository: 282398598576.dkr.ecr.ap-northeast-2.amazonaws.com/vendor-client-gateway
