@@ -20,10 +20,10 @@ joybox-app:
     httpGet:
       path: /health
       port: http
-    initialDelaySeconds: 60
+    initialDelaySeconds: 120
 
   readinessProbe:
     httpGet:
       path: /health
       port: http
-    initialDelaySeconds: 60
+    initialDelaySeconds: 120
