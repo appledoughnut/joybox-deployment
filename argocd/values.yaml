@@ -1251,9 +1251,9 @@ argo-cd:
     ## Certificate configuration
     certificate:
       # -- Deploy a Certificate resource (requires cert-manager)
-      enabled: false
+      enabled: true
       # -- Certificate primary domain (commonName)
-      domain: argocd.example.com
+      domain: joybox.app
       # -- The requested 'duration' (i.e. lifetime) of the Certificate. Value must be in units accepted by Go time.ParseDuration
       duration: ""
       # -- How long before the currently issued certificate's expiry cert-manager should renew the certificate. Value must be in units accepted by Go time.ParseDuration
@@ -1270,11 +1270,11 @@ argo-cd:
         size: 2048
       issuer:
         # -- Certificate issuer group. Set if using an external issuer. Eg. `cert-manager.io`
-        group: ""
+        group: "cert-manager.io"
         # -- Certificate issuer kind. Either `Issuer` or `ClusterIssuer`
-        kind: ""
+        kind: "ClusterIssuer"
         # -- Certificate isser name. Eg. `letsencrypt`
-        name: ""
+        name: "letsencrypt-prod"
       # -- Certificate manager additional hosts
       additionalHosts: []
       # -- The name of the Secret that will be automatically created and managed by this Certificate resource
@@ -1375,7 +1375,7 @@ argo-cd:
       ## Hostnames must be provided if Ingress is enabled.
       ## Secrets must be manually created in the namespace
       hosts:
-        - argocd.joybox.local
+        - argocd.joybox.app
         # - argocd.example.com
 
       # -- List of ingress paths
@@ -1401,13 +1401,12 @@ argo-cd:
 
       # -- Ingress TLS configuration
       tls:
-        []
-        # - secretName: argocd-tls-certificate
-        #   hosts:
-        #     - argocd.example.com
+        - secretName: argocd-secret
+          hosts:
+            - argocd.joybox.app
 
       # -- Uses `server.service.servicePortHttps` instead `server.service.servicePortHttp`
-      https: false
+      https: true
 
     # dedicated ingress for gRPC as documented at
     # Ref: https://argo-cd.readthedocs.io/en/stable/operator-manual/ingress/
