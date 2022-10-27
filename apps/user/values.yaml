@@ -12,7 +12,7 @@ joybox-app:
     enabled: true
     className: "nginx"
     hosts:
-    - host: user.joybox.local
+    - host: user.joybox.info
       paths:
       - path: /
         pathType: ImplementationSpecific

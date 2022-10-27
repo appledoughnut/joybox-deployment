@@ -9,7 +9,7 @@ joybox-app:
     enabled: true
     className: "nginx"
     hosts:
-    - host: pmw.joybox.local
+    - host: pmw.joybox.info
       paths:
       - path: /
         pathType: ImplementationSpecific

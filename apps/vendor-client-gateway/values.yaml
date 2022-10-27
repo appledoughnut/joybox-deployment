@@ -11,7 +11,7 @@ joybox-app:
     enabled: true
     className: "nginx"
     hosts:
-    - host: vcg.joybox.local
+    - host: vcg.joybox.info
       paths:
       - path: /
         pathType: ImplementationSpecific
